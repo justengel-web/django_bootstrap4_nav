@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse justify-content-md-center">
+    {% block site_name %}
+        <a href="/" class="navbar-brand mr-auto mr-lg-0">{% if BOOTSTRAP4_SITE_NAME %}{{ BOOTSTRAP4_SITE_NAME }}{% elif BOOTSTRAP4_TITLE %}{{ BOOTSTRAP4_TITLE }}{% else %}{{ site_name }}{% endif %}</a>
+    {% endblock %}
+    </div>
+</nav>
+
+<div id="nav-container" class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+            {% block navbar_items %}
+                {% include "bootstrap4_nav/navbar_items.html" %}
+            {% endblock navbar_items %}
+            </ul>
+        </div>
+    </nav>
+</div>

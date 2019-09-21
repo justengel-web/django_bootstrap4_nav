@@ -1,0 +1,11 @@
+include LICENSE
+include MANIFEST.in
+include README.rst
+include *requirements.txt
+
+recursive-include bootstrap4_nav/static *
+recursive-include bootstrap4_nav/templates *
+recursive-include bootstrap4_nav/templatetags *
+
+global-exclude __pycache__
+global-exclude __pycache__/*

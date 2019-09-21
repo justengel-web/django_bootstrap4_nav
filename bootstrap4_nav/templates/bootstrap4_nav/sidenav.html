@@ -1,0 +1,13 @@
+{% if SHOW_SIDENAV %}
+<!-- This has not been implemented yet! WIP -->
+<ul id="nav-sidenav" class="sidenav{% if FIXED_SIDENAV %} sidenav-fixed{% endif %}">
+  {% if title %}
+  <li><h4 class="center">{% if BOOTSTRAP4_SITE_NAME %}{{ BOOTSTRAP4_SITE_NAME }}{% elif BOOTSTRAP4_TITLE %}{{ BOOTSTRAP4_TITLE }}{% else %}{{ site_name }}{% endif %}</h4></li>
+  <li><div class="divider"></div></li>
+  {% endif %}
+
+  {% block sidenav_items %}
+    {% include "bootstrap4_nav/sidenav_items.html" %}
+  {% endblock %}
+</ul>
+{% endif %}

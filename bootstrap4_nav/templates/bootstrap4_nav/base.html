@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block base_head %}
+    {% include "bootstrap4_nav/head.html" %}
+    {% endblock base_head %}
+
+    {% block head %}{% endblock %}
+
+    <title>{% block title %}{% if title %}{{ title }}{% endif %}{% endblock %}</title>
+  </head>
+  <body>
+    {% block begin_body %}
+      {% include "bootstrap4_nav/begin_body.html" %}
+    {% endblock begin_body %}
+
+    <header>
+      {% block navbar %}
+        {% include "bootstrap4_nav/navbar.html" %}
+      {% endblock navbar %}
+    </header>
+
+    {% block sidenav %}
+      {% include "bootstrap4_nav/sidenav.html" %}
+    {% endblock sidenav %}
+
+    {% block container %}
+    <main id='container' class="container">
+      {% block contents %}{% endblock contents %}
+    </main>
+    {% endblock container %}
+
+    <footer>
+    {% block footer %}
+      {% include "bootstrap4_nav/footer.html" %}
+    {% endblock %}
+    </footer>
+
+    {% block modals %}{% endblock modals %}
+
+    {% block end_body %}
+      {% include "bootstrap4_nav/end_body.html" %}
+    {% endblock end_body %}
+
+    {% block scripts %}{% endblock scripts %}
+  </body>
+</html>
