@@ -1,0 +1,11 @@
+{% extends 'bootstrap4_nav/base.html' %}
+
+
+{% block contents %}
+    <h1>Guest</h1>
+
+    <h3>You have been logged out</h3>
+
+    <a class="btn" href="{% url 'password_reset' %}">Reset Password</a>
+    <a class="btn" href="{% url 'login' %}?next={{ url_path }}"><span class="name">Login</span></a>
+{% endblock %}

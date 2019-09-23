@@ -1,0 +1,12 @@
+{% extends 'bootstrap4_nav/base.html' %}
+{% load bootstrap4 %}
+
+{% block contents %}
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% if not hidden_input %}
+    <input type="submit" class="btn btn-primary" value="Save">
+    {% endif %}
+</form>
+{% endblock contents %}
