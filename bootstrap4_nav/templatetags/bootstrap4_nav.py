@@ -1,6 +1,11 @@
+from bootstrap4.templatetags.bootstrap4 import *
 from bootstrap4_nav.utils import render_tag
 from bootstrap4_nav.settings import mysettings
-from bootstrap4.templatetags.bootstrap4 import *
+
+
+@register.simple_tag
+def bootstrap4_icons_url():
+    return render_tag('link', end_tag=False, rel='stylesheet', **mysettings.BOOTSTRAP4_ICONS_URL)
 
 
 @register.simple_tag

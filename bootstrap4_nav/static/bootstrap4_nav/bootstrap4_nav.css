@@ -1,0 +1,21 @@
+
+.sidenav {
+    padding-left: 1em;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+}
+
+.sidenav-fixed{
+    margin-left: 1em;
+    position: fixed;
+}
+.sidenav-fixed-small{
+    margin-left: 1em;
+}
+
+
+.container{
+    margin-top: 1em;
+    max-width: 800px;
+}

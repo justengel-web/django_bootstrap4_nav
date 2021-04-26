@@ -1,4 +1,10 @@
 {% load bootstrap4_nav %}
-{# Load JavaScript #}
-{% bootstrap_javascript jquery='full' %}
-{% bootstrap4_nav_js_url %}
+
+
+<script type="text/javascript">
+    // Turn off the container for small screens
+    if(is_small()){
+        sidenav_small();
+        sidenav_fixed_small();
+    }
+</script>

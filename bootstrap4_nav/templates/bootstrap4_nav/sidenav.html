@@ -1,13 +1,24 @@
 {% if SHOW_SIDENAV %}
-<!-- This has not been implemented yet! WIP -->
-<ul id="nav-sidenav" class="sidenav{% if FIXED_SIDENAV %} sidenav-fixed{% endif %}">
-  {% if title %}
-  <li><h4 class="center">{% if BOOTSTRAP4_SITE_NAME %}{{ BOOTSTRAP4_SITE_NAME }}{% elif BOOTSTRAP4_TITLE %}{{ BOOTSTRAP4_TITLE }}{% else %}{{ site_name }}{% endif %}</h4></li>
-  <li><div class="divider"></div></li>
-  {% endif %}
+<nav id="nav-sidenav" class="{% if FIXED_SIDENAV %}sidenav-fixed {% else %}sidenav bg-light collapsed collapse show{% endif %}">
+    <div class="logo">
+        <h3 class="center">{% if BOOTSTRAP4_SITE_NAME %}{{ BOOTSTRAP4_SITE_NAME }}{% elif BOOTSTRAP4_TITLE %}{{ BOOTSTRAP4_TITLE }}{% else %}{{ site_name }}{% endif %}</h3>
+    </div>
 
-  {% block sidenav_items %}
-    {% include "bootstrap4_nav/sidenav_items.html" %}
-  {% endblock %}
-</ul>
+    <ul class="nav flex-column">
+    {% block sidenav_items %}
+        {% include "bootstrap4_nav/sidenav_items.html" %}
+    {% endblock %}
+    </ul>
+</nav>
+
+
+<!-- This has not been implemented yet! WIP -->
+
+{#<div id="nav-sidenav" class="row navbar-collapse sidenav{% if not FIXED_SIDENAV %} collapsed{% endif %}">#}
+{#    <ul class="nav flex-column">#}
+{#      {% block sidenav_items %}#}
+{#        {% include "bootstrap4_nav/sidenav_items.html" %}#}
+{#      {% endblock %}#}
+{#    </ul>#}
+{#</div>#}
 {% endif %}

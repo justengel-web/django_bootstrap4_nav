@@ -1,4 +1,8 @@
 {% load bootstrap4_nav %}
 
+{% bootstrap_jquery %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap4_nav_js_url %}
+
 {# Display django.contrib.messages as Bootstrap alerts #}
 {% include 'bootstrap4_nav/messages.html' %}

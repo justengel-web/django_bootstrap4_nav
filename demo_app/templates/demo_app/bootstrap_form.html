@@ -1,0 +1,10 @@
+{% extends "bootstrap4_nav/base.html" %}
+{% load bootstrap4 %}
+
+{% block contents %}
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input class='btn' type="submit" value="Submit">
+</form>
+{% endblock %}

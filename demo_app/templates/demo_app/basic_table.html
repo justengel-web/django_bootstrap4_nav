@@ -1,0 +1,9 @@
+{% extends "bootstrap4_nav/base.html" %}
+{% load django_tables2 %}
+
+
+{% block contents %}
+<div class="row">
+    {% render_table table %}
+</div>
+{% endblock %}
